@@ -40,7 +40,7 @@ export default function Stopwatch() {
     <>
 
 
-      <div className="min-h-screen bg-gray-200 p-8 w-fit-content">
+      <div className="min-h-auto bg-gray-200 p-8 w-fit-content">
         <div className="flex justify-center py-8 items-center h-fit-content bg-gray-800">
           {/* // MM */}
           <SevenSegmentDisplay number={Number(timeStringMinute[0])} />
