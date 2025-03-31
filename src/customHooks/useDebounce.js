@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useDebounce = (value = 0, duration = 100) => {
     const [debValue, setDebValue] = useState(value);
-
+    
     useEffect(() => {
-        const timeout = setTimeout(() => setDebValue(value), duration)
+        const timeout = setTimeout(() => setDebValue(value), duration);
 
         return () => clearTimeout(timeout);
 
-    }, [value]);
+    }, [value, duration]);
 
     return [debValue];
 }
